@@ -5,3 +5,4 @@ from .actor import *
 from .transition import *
 from .animation import *
 from .stitcher import *
+from .vec import *
