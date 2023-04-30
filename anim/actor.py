@@ -3,9 +3,10 @@ from cairo import Context
 from .var import Var
 from .vec import Vec
 
+# TODO : a better color class, which implements from_hsl, default alpha=1, etc
 RGBA = Vec[float]  # (r, g, b, a)
 
-__all__ = ['Actor', 'RGBA', 'Disk', 'Rect']
+__all__ = ['Actor', 'RGBA', 'Disc', 'Rect']
 
 class Actor:
 	__slots__ = 'xy', 'rgba'
@@ -18,7 +19,7 @@ class Actor:
 		pass
 
 
-class Disk(Actor):
+class Disc(Actor):
 	__slots__ = 'r'
 
 	def __init__(self, xy: Var[Vec[float]], r: Var[float], rgba: Var[RGBA] = (0, 0, 0, 1)) -> None:
