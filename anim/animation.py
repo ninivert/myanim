@@ -1,6 +1,7 @@
 import cairo
 from pathlib import Path
 import os
+from tqdm import tqdm
 from .utils import *
 from .var import *
 from .actor import *
@@ -45,7 +46,8 @@ class Animation:
 
 		os.makedirs(outdir, exist_ok=True)  # ensure output directory exists
 
-		for n in range(nframes+1):
+		# for n in range(nframes+1):
+		for n in tqdm(range(nframes+1), total=nframes+1, desc='frame'):
 			t = linterp(n, 0, nframes, start, end)
 
 			# update the current transitions

@@ -32,3 +32,12 @@ t => (internals)           => tweening (easings.py)  => interpolator         => 
      R+          -> [0,1]     [0,1] -> [0,1]            [0,1]       -> X
      t, (t0, tf) -> s         s     -> s'               s, (x0, xf) -> x(t)
 ```
+
+
+## todo
+
+* serialization-deserialization
+	* deserialize from yaml to Animation class
+	* parse math expressions (!!) (easy first implementation to test with : substitute vars and eval)
+	* implement ``Animation.dumps``
+* demo a bp animation

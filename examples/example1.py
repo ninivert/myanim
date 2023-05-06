@@ -9,27 +9,27 @@ from anim import *
 
 disc = Disc(
 	xy=Var(Vec([300, 200])), r=Var(50),
-	rgba=Var(Vec((0/255, 181/255, 204/255, 1)))
+	rgb=Var(Vec((0/255, 181/255, 204/255)))
 )
 rect = Rect(
 	xy=Var(Vec([100, 380])), w=Var(40), h=Var(60),
-	rgba=Var(Vec((249/255, 180/255, 45/255, 1)))
+	rgb=Var(Vec((249/255, 180/255, 45/255)))
 )
 disc2 = Disc(
 	xy=Var(Vec([30, 250])), r=Var(10),
-	rgba=Var(Vec((50/255, 205/255, 50/255, 1)))
+	rgb=Var(Vec((50/255, 205/255, 50/255)))
 )
 rect2 = Rect(
 	xy=Var(Vec([120, 350])), w=Var(30), h=Var(10),
-	rgba=Var(Vec((255/255, 20/255, 147/255, 1)))
+	rgb=Var(Vec((255/255, 20/255, 147/255)))
 )
 rect3 = Rect(
 	xy=Var(Vec([460, 140])), w=Var(50), h=Var(50),
-	rgba=Var(Vec((0.1, 0.9, 0.2, 1)))
+	rgb=Var(Vec((0.1, 0.9, 0.2)))
 )
 
 w, h = 500, 500
-background = Rect(Var(Vec([0.0, 0.0])), Var(w), Var(h), rgba=Var((0.05, 0.05, 0.05, 1)))
+background = Rect(Var(Vec([0.0, 0.0])), Var(w), Var(h), rgb=Var((0.05, 0.05, 0.05)))
 
 grow_radius = Transition(var=disc.r,
 	initial=disc.r.value, final=disc.r.value+100,
@@ -51,8 +51,8 @@ translate_line = Transition(var=rect2.xy,
 	start=1.4, length=2,
 	tween=ease_in_out_trig,
 )
-green_to_pink = Transition(var=disc2.rgba,
-	initial=disc2.rgba.value, final=Vec((255/255, 20/255, 147/255, 1)),
+green_to_pink = Transition(var=disc2.rgb,
+	initial=disc2.rgb.value, final=Vec((255/255, 20/255, 147/255)),
 	start=1, length=4
 )
 translate_bquad = Transition(var=rect3.xy,
